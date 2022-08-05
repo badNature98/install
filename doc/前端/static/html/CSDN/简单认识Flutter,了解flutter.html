@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix">
+      <link rel="stylesheet" href="/static/css/CSDN/index.css">
+      <div id="content_views" class="htmledit_views">
+        <h3><a name="t0"></a>一：什么是 Flutter</h3>
+        <p style="text-indent:33px;"><span style="color:#3399ea;">Flutter</span>是谷歌的移动<span
+            style="color:#3399ea;">UI</span>框架，可以快速在iOS和Android 上构建高质量的原生用户界面。 <span
+            style="color:#3399ea;">Flutter</span>可以与现有的代码一起工作。在全世界，<span
+            style="color:#3399ea;">Flutter</span>正在被越来越多的开发者和组织使用，并且<span style="color:#3399ea;">Flutter</span>是完全免费、开源的
+        </p>
+        <p style="text-indent:33px;"><span
+            style="color:#3399ea;">Flutter</span>是Google一个新的用于构建跨平台的手机App的SDK。写一份代码，在Android和iOS平台上都可以运行。</p>
+        <p style="text-indent:33px;"><strong>从官方的的介绍来看可以总结成三点：</strong></p>
+        <ul>
+          <li>
+            <p><strong>跨平台</strong> 现在<span style="color:#3399ea;">Flutter</span>至少可以跨 <strong>4</strong>
+              种平台，甚至支持嵌入式开发。我们常用的有<code>Linux</code>、<code>Android</code>、<code>IOS</code>，甚至可以在谷歌最新的操作系统上<code>Fuchsia</code>进行运行，经过第三方扩展，甚至可以跑在<code>MacOS</code>和<code>Windows</code>上，到目前为止，<code>Flutter</code>算是支持平台最多的框架了，良好的跨平台性，直接带来的好处就是减少开发成本。
+            </p>
+          </li>
+          <li>
+            <p><strong>原生用户界面：</strong> 它是原生的，让我们的体验更好，性能更好。用官方的话讲就是平滑而自然的滑动效果和平台感知，为您的用户带来全新的体验。</p>
+          </li>
+          <li>
+            <p><strong>开源免费：</strong>同<code>Android</code>系统一样，这些都是免费开源的。</p>
+          </li>
+        </ul>
+        <h3><a name="t1"></a>二：主流跨平台框架对比</h3>
+        <ul>
+          <li>
+            <p><strong>ReactNative 和 Weex（</strong>Weex是使用流行的 Web
+              开发体验来开发高性能原生应用的框架<strong>）：</strong>执行效率是硬伤，首页不能用<code>RN</code>已是共识，而且目前在同一<code>Android</code>和<code>iOS</code>代码方面尚存在不足。
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>PWA：</strong>用纯<code>Web</code>的方式统一三端，很好的<code>idea</code>。但是需要借助<code>Google play Service</code>和浏览器支持，国外大部分<code>Android</code>手机和<code>iOS</code>的新版本都可以支持<code>PWA</code>，但遗憾的是，国内的浏览器很难统一支持<code>PWA</code>，这还需要时间。
+            </p>
+          </li>
+          <li>
+            <p><strong>微信小程序：</strong>属于微信内的生态闭环，更适合工具类和小游戏，一般都作为原生<code>APP</code>的延伸入口。</p>
+          </li>
+          <li>
+            <p>
+              <strong>Flutter：</strong>在渲染技术上，<code>Flutter</code>选择了自己实现<code>GDI</code>，由于有更好的可控性，使用了新的语言<code>Dart</code>,避免了<code>RN</code>的那种通过桥接器与<code>Javascript</code>通讯导致效率低下的问题，所以在性能方面比<code>RN</code>更高一筹；有经验的开发者可以打开<code>Android</code>手机开发者选项里面的显示边界布局，发现<code>Flutter</code>的布局是一个整体。说明<code>Flutter</code>的渲染没用使用原生控件进行渲染。
+            </p>
+          </li>
+        </ul>
+        <div class="table-box">
+          <table align="center" border="1" cellpadding="1" cellspacing="1" style="width:700px;">
+            <tbody>
+              <tr>
+                <td><strong>技术类型</strong></td>
+                <td><strong>UI渲染方式</strong></td>
+                <td><strong>性能</strong></td>
+                <td><strong>开发效率</strong></td>
+                <td><strong>动态化</strong></td>
+                <td><strong>框架代表</strong></td>
+              </tr>
+              <tr>
+                <td>H5 + 原生</td>
+                <td>WebView 渲染</td>
+                <td>一般</td>
+                <td>高</td>
+                <td>✔️</td>
+                <td>Cordova、Ionic</td>
+              </tr>
+              <tr>
+                <td>JavaScript + 原生渲染</td>
+                <td>原生控件渲染</td>
+                <td>好</td>
+                <td>高</td>
+                <td>✔️</td>
+                <td>RN、Weex</td>
+              </tr>
+              <tr>
+                <td>自绘UI + 原生</td>
+                <td>调用系统API渲染</td>
+                <td>好</td>
+                <td>高</td>
+                <td>默认不支持</td>
+                <td>Flutter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>&nbsp;</p>
+        <h3><a name="t2"></a>三：Flutter 的特点</h3>
+        <p><strong>1. 快速开发</strong><br> 毫秒级的热重载，修改后，您的应用界面会立即更新。使用丰富的、完全可定制的<code>widget</code>在几分钟内构建原生界面。</p>
+        <p><img alt="" src="https://img-blog.csdnimg.cn/img_convert/72c7eb1038b35b40257c54753264cbcb.gif"></p>
+        <p><strong>2. 富有表现力和灵活的UI</strong><br>
+          使用<code>Flutter</code>内置美丽的<code>Material Design</code>和<code>Cupertino</code>的<code>widget</code>、丰富的<code>motion API</code>、平滑而自然的滑动效果和平台感知，为您的用户带来全新体验。
+        </p>
+        <p><strong>3. 响应式框架</strong><br>
+          使用<code>Flutter</code>的响应式框架和一系列基础<code>widget</code>，可以轻松构建您的用户界面。使用功能强大且灵活的<code>API</code>（针对2D、动画、手势、效果等）可以帮助开发者解决艰难的<code>UI</code>挑战。
+        </p>
+        <pre data-index="0" class="set-code-hide"
+          name="code"><code class="language-javascript hljs"><ol class="hljs-ln" style="width:100%"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">class</span> <span class="hljs-title class_">CounterState</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">State</span>&lt;<span class="hljs-title class_">Counter</span>&gt; {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  int counter = <span class="hljs-number">0</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">void</span> <span class="hljs-title function_">increment</span>(<span class="hljs-params"></span>) {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">// 告诉Flutter state已经改变, Flutter会调用build()，更新显示</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-title function_">setState</span>(() {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      counter++;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    });</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  }</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-title class_">Widget</span> <span class="hljs-title function_">build</span>(<span class="hljs-params">BuildContext context</span>) {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">// 当 setState 被调用时，这个方法都会重新执行.</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">// Flutter 对此方法做了优化，使重新执行变的很快</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">// 所以你可以重新构建任何需要更新的东西，而无需分别去修改各个widget</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Row</span>(</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      <span class="hljs-attr">children</span>: &lt;<span class="hljs-title class_">Widget</span>&gt;[</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-keyword">new</span> <span class="hljs-title class_">RaisedButton</span>(</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">          <span class="hljs-attr">onPressed</span>: increment,</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">          <span class="hljs-attr">child</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Text</span>(<span class="hljs-string">'Increment'</span>),</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        ),</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Text</span>(<span class="hljs-string">'Count: $counter'</span>),</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      ],</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    );</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  }</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">}</div></div></li></ol></code><div class="hide-preCode-box"><span class="hide-preCode-bt"><img class="look-more-preCode contentImg-no-view" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCodeMoreWhite.png" alt="" title=""></span></div><div class="hljs-button {2}" data-title="复制" onclick="hljs.copyCode(event)"></div></pre>
+        <p>浏览&nbsp;<a href="https://flutterchina.club/widgets/">Widgets 目录</a>&nbsp;，了解更多关于&nbsp;<a
+            href="https://flutterchina.club/widgets-intro/">Flutter Widget框架概述</a></p>
+        <p><strong>4.
+            访问本地功能和SDK并支持插件</strong><br><code>Flutter</code>可以复用<code>Java</code>、<code>Swift</code>或<code>ObjC</code>代码，访问<code>Android</code>和<code>iOS</code>上的原生系统功能。另外通过<code>Flutter</code>插件也可以访问原生系统功能，比如蓝牙、相机、<code>WiFi</code>等等。
+        </p>
+        <p><strong>5.
+            跨平台自绘引擎</strong><br><code>Flutter</code>与<code>Hybrid App</code>、<code>React Native</code>这些跨平台技术不同，<code>Flutter</code>既没用使用<code>WebView</code>，也没有使用各个平台的原生控件，而是本身实现一个统一接口的渲染引擎来绘制<code>UI</code>，这样做可以保证不同平台<code>UI</code>的一致性。另外采用自绘引擎后，<code>Flutter</code>在布局过程中不需要像<code>RN</code>那样要在<code>JavaScript</code>和<code>Native</code>之间通信，可以节省性能开销。<code>Flutter</code>使用<code>Skia</code>作为其2D渲染引擎，<code>Skia</code>是<code>Google</code>的一个2D图形处理函数库，包含字型、坐标转换，以及点阵图都有高效能且简洁的表现，<code>Skia</code>是跨平台的，并提供了非常友好的<code>API</code>。
+        </p>
+        <p><strong>6.
+            采用Dart开发</strong><br><code>Flutter App</code>采用<code>Dart</code>语言来开发。与<code>JavaScript</code>相比，<code>Dart</code>在<code>JIT</code>（即时编译）模式下，速度与<code>JavaScript</code>基本持平。但是当<code>Dart</code>以
+          <code>AOT</code>（运行前编译）模式运行时，<code>Dart</code>性能要高于<code>JavaScript</code>。
+        </p>
+        <p>&nbsp;</p>
+        <h3><a name="t3"></a>参考学习网站：<a href="https://flutterchina.club/">Flutter 中文网</a></h3>
+      </div>
+      <div>
+        <div></div>
+      </div>
+    </div>
+
+  </article>
+</body>
+
+</html>

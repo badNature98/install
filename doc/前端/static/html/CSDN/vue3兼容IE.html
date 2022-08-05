@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix">
+      <link rel="stylesheet" href="/static/css/CSDN/index.css">
+      <div id="content_views" class="markdown_views prism-atom-one-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+        </svg>
+        <p><strong>vue3.0 兼容ie浏览器</strong></p>
+        <ol>
+          <li>
+            <h6><a id="babelpolyfill_2"></a>安装babel/polyfill</h6>
+            <pre data-index="0"
+              class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">	npm install --save @babel/polyfill
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li></ul></pre>
+          </li>
+          <li>
+            <h6><a id="mainjs_5"></a>在main.js里面引入</h6>
+            <pre data-index="1"
+              class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">	（一定要在最上面，第一行）
+  	import '@babel/polyfill'
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li></ul></pre>
+          </li>
+          <li>
+            <h6><a id="babelconfigjs_9"></a>安装完成后会有babel.config.js文件，需手动定义</h6>
+            <pre data-index="2"
+              class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">   module.exports = {
+     	  presets: [
+     	    // '@vue/cli-plugin-babel/preset',
+     	    ['@vue/app', {
+     	      useBuiltIns: 'entry',
+     	  }]
+     	  ]
+     	}
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li></ul></pre>
+          </li>
+          <li>
+            <h6><a id="packagejsonbrowserslist_19"></a>在package.json文件browserslist配置</h6>
+            <pre data-index="3"
+              class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">	"browserslist": [
+  	    "&gt; 1%",
+  	    "last 2 versions",
+  	    "not ie &lt;= 11"
+  	  ]
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li></ul></pre>
+          </li>
+          <li>
+            <h6><a id="vuexvueconfigjses5_26"></a>使用了vuex的在vue.config.js中，转es5</h6>
+            <pre data-index="4"
+              class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">   module.exports = {
+     	transpileDependencies:[/node_modules[/\\\\](element-ui|vuex|)[/\\\\]/]
+     }
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li></ul></pre>
+          </li>
+        </ol>
+        <pre data-index="5"
+          class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">end  大功告成
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li></ul></pre>
+      </div>
+      <div
+        data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;spm&quot;:&quot;1001.2101.3001.6548&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_43840320/article/details/117781204&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}">
+        <div></div>
+      </div>
+    </div>
+
+  </article>
+</body>
+
+</html>

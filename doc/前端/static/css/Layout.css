@@ -1,0 +1,62 @@
+.Header{
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  line-height: 60px;
+  background-color: rgb(124, 161, 243);
+  width: 100%;
+  padding: 0 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+  z-index: 800;
+}
+.Sidebar{ 
+  box-sizing: border-box;
+  width: 200px;
+  position: fixed;
+  top: 60px ;
+  left: 0;
+  border-right: 2px solid #999;
+  height: 100%;
+  z-index: 700;
+}
+.Sidebar ul {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding:0 ;
+}
+.Sidebar ul li {
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  list-style: none;
+  line-height: 2em;
+  padding-left: 10px;
+  border: 0px solid white;
+  padding-right: 10px;
+  transition: background 0.3s,color 0.15s,border 0.3s;
+}
+.Sidebar ul li:hover{
+  cursor: Default ;
+  background-color: lavender;
+}
+.Sidebar ul li.active{
+  border-left: 10px solid chartreuse;
+  background-color: rgb(196, 196, 250);
+  color: rgb(123, 3, 134);
+}
+
+.Main{ 
+  box-sizing: border-box;
+  padding-left:200px ;
+  margin-top: 60px;
+  width: 100%;
+}
+.Main .View{
+padding: 5px;
+}
