@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <article class="baidu_pl">
+    原作者地址：<a
+      href="https://blog.csdn.net/qq_39457683/article/details/123494789">https://blog.csdn.net/qq_39457683/article/details/123494789</a>
+    <div id="article_content" class="article_content clearfix">
+      <link rel="stylesheet" href="/static/css/CSDN/index.css">
+      <div id="content_views" class="markdown_views prism-atom-one-light">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block"
+            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+        </svg>
+        <p>在编译Windows平台时出现异常提示</p>
+        <pre data-index="0"
+          class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">Exception: Unable to find suitable Visual Studio toolchain. Please run `flutter doctor` for more details.
+  
+  <div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li></ul></pre>
+        <p>看起来我的Visual Studio出了什么问题<br> 于是我按照提示在终端使用了 <strong>flutter doctor</strong> 命令’</p>
+        <p>也可以Shift+Ctrl+P执行<strong>Flutter:Run Flutter Doctor</strong><br> <img
+            src="https://img-blog.csdnimg.cn/1cc8e5bed3bb44039e9607144b8cd2e8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_18,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"><br> 执行完后它巴拉巴拉输出了一堆<br> <img
+            src="https://img-blog.csdnimg.cn/522a408e4e654cf2a5cc535c6b03f022.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_20,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"><br> 看见这里说我的Visual Studio缺少了必要的开发组件</p>
+        <p>Visual Studio - develop for Windows (Visual Studio Community 2019 16.10.3)<br> • Visual Studio at D:\Program
+          Files (x86)\Microsoft Visual Studio\2019\Community<br> • Visual Studio Community 2019 version
+          16.10.31424.327<br> X Visual Studio is missing necessary components. Please re-run the Visual Studio installer
+          for the “Desktop development with C++” workload, and include these components:<br> MSVC v142 - VS 2019 C++
+          x64/x86 build tools<br> - If there are multiple build tool versions available, install the latest<br> C++
+          CMake
+          tools for Windows<br> Windows 10 SDK</p>
+        <p>好，这下知道原因了，好嘛，咱这就去装</p>
+        <blockquote>
+          <p>PS: Visual Studio版本最少要2019版</p>
+        </blockquote>
+        <p>打开Visual Studio</p>
+        <p>如果没有下载的Visual Studio的小伙伴先 <a
+            href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/"><strong>去下载</strong></a></p>
+        <p><img
+            src="https://img-blog.csdnimg.cn/aed01201dc9b442abde11c0314654efe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_20,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"></p>
+        <p><img
+            src="https://img-blog.csdnimg.cn/324c5e74dd1547328c081721c4de03d5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_20,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"><br> 然后等待它下载完成</p>
+        <p>下载好了之后回到VS Code在终端执行一下<strong>flutter doctor</strong><br> <img
+            src="https://img-blog.csdnimg.cn/a382f05f271d4a05ae939dee59c4495d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_20,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"><br> Yes，已经打勾了</p>
+        <p>然后运行一下项目<br> <img
+            src="https://img-blog.csdnimg.cn/9008526f3b95415cbfce0939a5f8e2c5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmVsaXhfRmx5MjAyMQ==,size_20,color_FFFFFF,t_70,g_se,x_16"
+            alt="在这里插入图片描述"></p>
+        <p>运行成功啦</p>
+      </div>
+      <div
+        data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;spm&quot;:&quot;1001.2101.3001.6548&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_39457683/article/details/123494789&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}">
+        <div></div>
+      </div>
+    </div>
+
+  </article>
+</body>
+
+</html>

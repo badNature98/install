@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    const head = document.getElementsByTagName('head')[0]
+    let href =  window.location.pathname
+    href = href.replace(/\/((?!\/).)+.html/i,'')
+    const CSS = ['/css/pluginsCss.css','/css/plugins.css','/css/luckysheet.css','/css/iconfont.css']
+    const JS = ['/js/plugin.js','/js/luckysheet.umd.js','/js/index.js']
+    //css
+    for(let path of CSS){
+      const link =document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = href + path
+      head.appendChild(link)
+    }
+    //js
+    for(let path of JS){
+      const script =document.createElement('script')
+      script.src = href + path
+      if(path ==='/js/index.js'){
+        script.type="module"
+      }
+      head.appendChild(script)
+    }
+
+  </script>
+</head>
+
+<body>
+  <div id="luckysheet-view" style="margin:0px;padding:0px;position:absolute;width:100%;left: 0px;top: 30px;bottom:0px;"></div>
+</body>
+
+</html>
